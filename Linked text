@@ -1,0 +1,19 @@
+package softwareselenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Linkedtextlocaterclickaction 
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+       System.setProperty("webdriver.chrome.driver", "./selenium/chromedriver.exe");
+       WebDriver driver=new ChromeDriver();
+       driver.get("https://www.facebook.com");
+       Thread.sleep(2000);
+       driver.findElement(By.linkText("ಕನ್ನಡ")).click();
+	}
+
+}
