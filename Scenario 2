@@ -1,0 +1,24 @@
+package softwareselenium;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Senario3
+{
+	public static void main(String[] args) throws InterruptedException 
+	{
+		 System.setProperty("webdriver.chrome.driver", "./selenium/chromedriver.exe");
+	       WebDriver driver=new ChromeDriver();
+	       driver.get("https://demoqa.com/text-box");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("userName")).sendKeys("Navaneeth");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("userEmail")).sendKeys("Navaneeth@gmail.com");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("currentAddress")).sendKeys("ffffffffffffffffffffffffffffff");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("permanentAddress")).sendKeys("ttttttttttttttttttttttttf");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("submit")).click();
+	}
+}
