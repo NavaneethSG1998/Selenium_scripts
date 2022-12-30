@@ -1,0 +1,22 @@
+package softwareselenium;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import com.google.common.collect.Table.Cell;
+
+public class Datadriven 
+{
+
+	public static void main(String[] args) throws EncryptedDocumentException, IOException, InterruptedException
+	{
+	FileInputStream	fil=new FileInputStream("./Excel/Book1.xlsx");
+	workbook book=workbookFactory.create(fil);
+	sheet sh=book.getsheet("sheet1");                                    
+    Row ro=sh.getRow(0);
+    Cell cel=ro.getCell(0);
+    String value=cel.StringCellvalue();
+    System.out.println(value);
+	}
+
+}
