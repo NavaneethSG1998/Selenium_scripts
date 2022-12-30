@@ -1,0 +1,25 @@
+package softwareselenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Scenario4 {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		 System.setProperty("webdriver.chrome.driver", "./selenium/chromedriver.exe");
+	       WebDriver driver=new ChromeDriver();
+	       Thread.sleep(2000);
+	       driver.get("https://www.youtube.com/");
+	       Thread.sleep(2000);
+	       driver.findElement(By.name("search_query")).sendKeys("kannada comedy scenes");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("search-icon-legacy")).click();
+	       Thread.sleep(2000);
+	       driver.findElement(By.linkText("Chikkanna Kannada Comedy | Chikkanna Love Success And Sharan Super Comedy Scenes | Adhyaksha")).click();
+	       
+
+	}
+	
+}
