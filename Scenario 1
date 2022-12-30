@@ -1,0 +1,34 @@
+package softwareselenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Senario1 {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		  System.setProperty("webdriver.chrome.driver", "./selenium/chromedriver.exe");
+	       WebDriver driver=new ChromeDriver();
+	       driver.get("https://demoqa.com/webtables");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("addNewRecordButton")).click();
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("firstName")).sendKeys("Navaneeth");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("lastName")).sendKeys("Sa");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("userEmail")).sendKeys("gowdanavaneeths@gmail.com");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("age")).sendKeys("24");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("salary")).sendKeys("20000");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("department")).sendKeys("mechanical");
+	       Thread.sleep(2000);
+	       driver.findElement(By.id("submit")).click();
+
+
+   	}
+
+}
