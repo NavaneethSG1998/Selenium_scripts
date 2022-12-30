@@ -1,0 +1,22 @@
+package softwareselenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Snd_mail_nav
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		 System.setProperty("webdriver.gecko.driver", "./selenium/geckodriver.exe");
+            WebDriver driver = new FirefoxDriver();
+	        Thread.sleep(2000);
+	        driver.get("https://accounts.google.com/v3/signin/identifier?dsh=S554516390%3A1667493360596447&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=ARgdvAt6u7BU81ux_Ii7YaOMDOMwhSdrHA3vmE-zXo3B_bunMY6Ua_RnjcAeH3r8Vql9xLwyqO3SNw");
+	        Thread.sleep(2000);
+	        driver.findElement(By.xpath("//input[@name='identifier']")).sendKeys("gowdanavaneeths@gmail.com");
+	        Thread.sleep(2000);
+	        driver.findElement(By.xpath("(//button[@jsname='LgbsSe'])[2]")).click();
+	}
+
+}
