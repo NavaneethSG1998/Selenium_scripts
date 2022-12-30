@@ -1,0 +1,21 @@
+package softwareselenium;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Max_Crome 
+{
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		 System.setProperty("webdriver.chrome.driver", "./selenium/chromedriver.exe");
+	       WebDriver driver=new ChromeDriver();
+	       Thread.sleep(2000);
+	       driver.manage().window().maximize();
+	       driver.get("https://www.facebook.com");
+	       
+	       
+
+	}
+
+}
