@@ -1,0 +1,44 @@
+package softwareselenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Xpath_insta
+{
+
+	public static void main(String[] args) throws InterruptedException
+	{
+            System.setProperty("webdriver.gecko.driver", "./selenium/geckodriver.exe");
+            FirefoxDriver driver = new FirefoxDriver();
+ 	        Thread.sleep(2000);
+	        driver.get("https://www.instagram.com");
+ 	        Thread.sleep(2000);
+ 	        driver.findElement(By.xpath("//input[@name='username']")).sendKeys("gowdanavaneeths@gmail.com");
+ 	        Thread.sleep(2000);
+ 	        driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Nava@25041998");
+ 	        Thread.sleep(4000);
+ 	         driver.findElement(By.xpath("//button[@type='submit']")).click();
+ 	        Thread.sleep(6000);
+ 	        driver.findElement(By.xpath("//button[.='Not Now']")).click();
+ 	        Thread.sleep(5000);
+ 	       driver.findElement(By.xpath("//button[.='Not Now']")).click();
+ 	        Thread.sleep(5000);
+ 	       driver.findElement(By.xpath(("(//div[.='Messages'])[1]"))).click();
+ 	        Thread.sleep(5000);
+ 	       driver.findElement(By.xpath("//button[.='Send Message']")).click();
+ 	        Thread.sleep(5000);
+ 	        driver.findElement(By.xpath("//input[@placeholder='Search...']")).sendKeys("megharajgn");
+ 	        Thread.sleep(5000);
+ 	         driver.findElement(By.xpath("//div[.='ro_hit_karajigi']")).click();
+ 	         Thread.sleep(5000);
+ 	         driver.findElement(By.xpath("(//div[.='Next'])[2]")).click();
+ 	        Thread.sleep(5000);
+ 	        driver.findElement(By.xpath("//textarea[@placeholder='Message...']")).sendKeys("111111");
+ 	       Thread.sleep(5000);
+ 	       driver.findElement(By.xpath("//button[.='Send']")).click();
+    	   Thread.sleep(5000);
+     	  driver.findElement(By.xpath("(//button[@type='button'])[12]")).click();
+ 	         
+	}
+
+}
