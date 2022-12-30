@@ -1,0 +1,23 @@
+package softwareselenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Instalogin_Css {
+
+	public static void main(String[] args) throws InterruptedException
+	{
+            System.setProperty("webdriver.gecko.driver", "./selenium/geckodriver.exe");
+            FirefoxDriver driver = new FirefoxDriver();
+ 	        Thread.sleep(2000);
+	        driver.get("https://www.instagram.com/accounts/login/");
+ 	        Thread.sleep(2000);
+ 	        driver.findElement(By.cssSelector("input[name='username']")).sendKeys("gowdanavaneeths@gmail.com");
+ 	        Thread.sleep(2000);
+ 	        driver.findElement(By.cssSelector("input[type='password']")).sendKeys("Nava@25041998");
+ 	        Thread.sleep(2000);
+ 	        driver.findElement(By.cssSelector("button[type='submit']")).click();
+
+	}
+
+}
